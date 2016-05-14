@@ -1,0 +1,24 @@
+{
+  "name": "web-bluetooth",
+  "version": "0.0.1",
+  "description": "IN DEVELOPMENT: A configurable application framework for integrating bluetooth functionality with client-side javascript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "export NODE_ENV=test && mocha --timeout 3000 test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabertooth-io/web-bluetooth.git"
+  },
+  "author": "Aaron Peltz, Alex Patch, Carlos Corral and Daniel Lee",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/sabertooth-io/web-bluetooth/issues"
+  },
+  "homepage": "https://github.com/sabertooth-io/web-bluetooth#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "sinon": "^1.17.4"
+  }
+}

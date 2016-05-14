@@ -1,0 +1,19 @@
+{
+  "name": "web-bluetooth",
+  "description": "A configurable application framework for integrating bluetooth functionality with client-side javascript.",
+  "main": "index.js",
+  "authors": [
+    "Aaron Peltz",
+    "Alex Patch",
+    "Carlos Corral and Daniel Lee"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/sabertooth-io/web-bluetooth",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
