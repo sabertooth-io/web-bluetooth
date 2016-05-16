@@ -1,6 +1,6 @@
 {
   "name": "web-bluetooth",
-  "version": "0.0.3",
+  "version": "0.0.10",
   "description": "IN DEVELOPMENT: A configurable application framework for integrating bluetooth functionality with client-side javascript.",
   "main": "index.js",
   "scripts": {
