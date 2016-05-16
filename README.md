@@ -4,8 +4,6 @@
 
 ##### Bridging the gap between the web and the physical world through Bluetooth.
 
-![](assets/BLE-WebInfographic.svg)
-
 Previously, interacting with Bluetooth devices was limited to native applications. Access to connect, read, and write from Bluetooth devices is now made available to web applications thanks to the Web Bluetooth API and modern web browsers like Chrome and Firefox, Opera who are incresingly adding support for new features in the Web Bluetooth API Spec.
 
 ### Overview
@@ -18,9 +16,9 @@ Web-Bluetooth (currently v1.0.0) has a few easy ways to quickly get started, eac
 
 #### Download
 
-You can install web-bluetooth by downloading our minified library [here](http://npmjs.com/)
+You can install web-bluetooth by downloading our minified library [here](https://github.com/sabertooth-io/web-bluetooth/archive/master.zip)
 
-Make the library available by referecing it in your index.html file.
+Make the library available by referencing it in your index.html file.
 
 ```
 <script>/lib/web-bluetooth.js</script>
@@ -28,7 +26,7 @@ Make the library available by referecing it in your index.html file.
 
 #### Install with npm
 
-You can install web-bluetooth with [npm](http://npmjs.com/)
+You can install web-bluetooth with [npm](https://npmjs.com/package/web-bluetooth)
 
 Require('web-bluetooth') will load all of the files necessary to run our library.
 
@@ -105,8 +103,6 @@ Device is a constructor that takes in an object corresponding to attributes on t
 
 `'uuid':` collection of characteristics and the relationships to other services encapsulate the behavior of part of a device
 
-* * *
-
 #### .connect()
 
 Method allows you to establish a persistent connection with a Bluetooth device.
@@ -117,17 +113,12 @@ fitbit.connect(connectedDevice,(server) => {
 };
 ```
 
-* * *
-
 #### .disconnect()
 
 Method disconnects you from the device.
 
 ```
 fitbit.disconnect();
-```
-
-* * *
 
 #### .getValue('service')
 
@@ -143,13 +134,9 @@ fitbit
 
 In the above example, .getValue() returns the current battery level as a percentage from 0% to 100%; 0% represents a battery that is fully discharged, 100% represents a battery that is fully charged.
 
-* * *
-
 ### Demo
 
 #### Battery Service
-
-[![](assets/battery_service.png)](https://github.com/sabertooth-io/demo-battery_service)
 
 This demo uses the Web-Bluetooth library to connect to a device broadcasting a Battery Service characteristic and reads it's level.
 
