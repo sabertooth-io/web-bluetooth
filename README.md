@@ -119,6 +119,7 @@ Method disconnects you from the device.
 
 ```
 fitbit.disconnect();
+```
 
 #### .getValue('service')
 
@@ -137,7 +138,6 @@ In the above example, .getValue() returns the current battery level as a percent
 ### Demo
 
 #### Battery Service
-
 This demo uses the Web-Bluetooth library to connect to a device broadcasting a Battery Service characteristic and reads it's level.
 
 [View the demo.](http://demo-battery-service.herokuapp.com/) | [Visit the GitHub page.](https://github.com/sabertooth-io/demo-battery_service)
