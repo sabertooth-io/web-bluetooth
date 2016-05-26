@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Sabertooth Browser Tests</title>
+	<link href="./../bower_components/mocha/mocha.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="permissions">
+	</div>
+	<div id="mocha">
+		<script type="application/javascript" src="./../bower_components/chai/chai.js"></script>
+		<script type="application/javascript" src="./../bower_components/sinon/lib/sinon.js"></script>
+		<script type="application/javascript" src="./../bower_components/mocha/mocha.js"></script>
+		<script type="application/javascript" src="./../lib/main.js"></script>
+ 		<script type="application/javascript">
+			mocha.setup('bdd');
+    </script>
+    <script type="application/javascript" src="./lib/raw-browser-api-tests.js"></script>
+	</div>
+</body>
+
+</html>
