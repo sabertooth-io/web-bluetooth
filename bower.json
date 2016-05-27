@@ -15,5 +15,10 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "chai": "^3.5.0",
+    "sinon": "^1.17.4"
+  }
 }
