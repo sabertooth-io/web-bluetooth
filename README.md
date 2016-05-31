@@ -121,13 +121,13 @@ Method disconnects you from the device.
 fitbit.disconnect();
 ```
 
-#### .getValue('service')
+#### .getValue('characteristic')
 
 Method reads the value from the device you are connected to by passing in the characteristic as a string.
 
 ```
 fitbit
-  .getValue('battery_service')
+  .getValue('battery_level')
     .then(value => {
       console.log(value);
     });
@@ -140,10 +140,10 @@ In the above example, .getValue() returns the current battery level as a percent
 #### Battery Service
 This demo uses the Web-Bluetooth library to connect to a device broadcasting a Battery Service characteristic and reads it's level.
 
-[View the demo.](http://demo-battery-service.herokuapp.com/) | [Visit the GitHub page.](https://github.com/sabertooth-io/demo-battery_service)
+[View the demo.](https://demo-battery-service.herokuapp.com/) | [Visit the GitHub page.](https://github.com/sabertooth-io/demo-battery_service)
 
 Notes:
-• Requires Android 6.0 Marshmellow or ChromeOS.
+• Requires Android 6.0 Marshmallow, ChromeOS or Chrome for Linux.
 • Enable the 'Web Bluetooth' flag.
 
 ### Authors and Contributors
