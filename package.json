@@ -1,7 +1,7 @@
 {
   "name": "web-bluetooth",
-  "version": "0.0.11",
-  "description": "A configurable application framework for integrating bluetooth functionality with client-side javascript. Currently in Alpha.",
+  "version": "0.0.12",
+  "description": "Library for interacting with Bluetooth devices through the browser. Currently in Alpha.",
   "keywords": [
     "abstraction",
     "API",

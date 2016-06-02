@@ -1,7 +1,5 @@
 # web-bluetooth
 
-### A Javascript Library for interacting with Bluetooth Low Energy Devices.
-
 ##### Bridging the gap between the web and the physical world through Bluetooth.
 
 Previously, interacting with Bluetooth devices was limited to native applications. Access to connect, read, and write from Bluetooth devices is now made available to web applications thanks to the Web Bluetooth API and modern web browsers like Chrome and Firefox, Opera who are incresingly adding support for new features in the Web Bluetooth API Spec.
