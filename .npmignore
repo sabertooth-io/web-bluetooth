@@ -1,0 +1,6 @@
+bower.json
+bower_components
+.eslintrc
+node_modules
+npm-debug.log
+test/

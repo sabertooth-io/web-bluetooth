@@ -1,25 +1,52 @@
 {
   "name": "web-bluetooth",
   "version": "0.0.11",
-  "description": "Pre-release: A configurable application framework for integrating bluetooth functionality with client-side javascript.",
-  "main": "index.js",
-  "scripts": {
-    "test": "export NODE_ENV=test && mocha --timeout 3000 test"
-  },
+  "description": "A configurable application framework for integrating bluetooth functionality with client-side javascript. Currently in Alpha.",
+  "keywords": [
+    "abstraction",
+    "API",
+    "ble",
+    "bluetooth",
+    "browser",
+    "client",
+    "developer",
+    "developer tool",
+    "experimental",
+    "framework",
+    "internet of things",
+    "library",
+    "web-bluetooth"
+  ],
+  "homepage": "docs.sabertooth.io",
+  "author": "Alex Patch <alex.patch3@gmail.com> (https://github.com/the-gingerbread-man)",
+  "contributors": [
+    "Alex Patch <alex.patch3@gmail.com> (https://github.com/the-gingerbread-man)",
+    "Aaron Peltz <aaron.peltz@gmail.com> (https://github.com/apeltz)",
+    "Carlos Corral <ccorral27@gmail.com> (https://github.com/ccorral)",
+    "Daniel Lee <lee.daniel393@gmail.com> (https://github.com/dslee393)",
+    "Francois Beaufort (https://github.com/beaufortfrancois)"
+  ],
+  "maintainers": "Alex Patch <alex.patch3@gmail.com> (https://github.com/the-gingerbread-man)",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sabertooth-io/web-bluetooth.git"
   },
-  "author": "Aaron Peltz, Alex Patch, Carlos Corral and Daniel Lee",
-  "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/sabertooth-io/web-bluetooth/issues"
+    "url": "https://github.com/sabertooth-io/web-bluetooth/issues",
+    "email": "alex.patch3@gmail.com"
   },
-  "homepage": "https://github.com/sabertooth-io/web-bluetooth#readme",
+  "main": "index.js",
+  "scripts": {
+    "test": "open test/browser-integration.html",
+    "lint": "eslint lib/*.js && eslint lib/**/*.js"
+  },
+  "license": "Apache-2.0",
   "devDependencies": {
     "chai": "^3.5.0",
+    "eslint": "^2.11.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-jsx-a11y": "^1.2.2",
     "mocha": "^2.4.5",
     "sinon": "^1.17.4"
-  },
-  "keywords": ["abstraction", "ble", "bluetooth", "client", "framework", "web-bluetooth"]
+  }
 }
