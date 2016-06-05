@@ -1,7 +1,7 @@
 # web-bluetooth
 
-[![npm](https://img.shields.io/npm/v/npm.svg?maxAge=2592000)](https://www.npmjs.com/package/web-bluetooth)
-[![npm](https://img.shields.io/npm/dm/localeval.svg?maxAge=2592000)](https://www.npmjs.com/package/web-bluetooth)
+[![npm version](https://badge.fury.io/js/web-bluetooth.svg)](https://badge.fury.io/js/web-bluetooth)
+[![pull requests welcomed](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
 
 ### A Javascript Library for interacting with Bluetooth Low Energy Devices.
 
