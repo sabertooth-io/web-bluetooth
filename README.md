@@ -27,10 +27,9 @@ Or run the command-line script below in the project directory in which you would
 ```
 $ npm install web-bluetooth
 ```
-`require('web-bluetooth')` will load all of the files necessary to run Sabertooth.
-```
-const BluetoothDevice = require('web-bluetooth');
-```
+The following will load all of the files necessary to run Sabertooth.
+
+`require('web-bluetooth')`
 
 ### General Accesibility
 
@@ -59,7 +58,7 @@ For the complete list of normative GATT services click [here](https://webbluetoo
 
 #### Creating a New Bluetooth Device
 
-##### new BluetoothDevice(filters)
+##### `new BluetoothDevice(filters)`
 
 To begin interacting with a Bluetooth device, create a new instance of BluetoothDevice and save the result to a variable. BluetoothDevice is a constructor that takes in an object filters containing attributes advertised by the Bluetooth device.
 
@@ -118,7 +117,7 @@ var exampleDevice = new BluetoothDevice({
 ```
 ---
 #### General Methods
-##### .connect()
+##### `.connect()`
 
 Method establishes a persistent connection with a Bluetooth device.
 ##### Parameters
@@ -133,7 +132,7 @@ In the example above, a connection to a previously created BluetoothDevice insta
 
 ---
 
-##### .disconnect()
+##### `.disconnect()`
 
 Method removes a previous connection with a Bluetooth device.
 ##### Parameters
@@ -145,7 +144,7 @@ A boolean representing the success of the attempt to disconnect from the device 
 exampleDevice.disconnect();
 ```
 ---
-##### .connected()
+##### `.connected()`
 
 Method returns the current connection status of the device.
 
@@ -185,7 +184,7 @@ exampleDevice.getValue('battery_level')
 In the above example, the `.getValue()` method is called on the `BluetoothDevice` instance exampleDevice, which returns an object, in this example referenced as `value`. `value` contains the ArrayBuffer returned from the device stored to the property `rawValue`, and because `'battery_level'` is a fully supported characteristic in Sabertooth, value also contains the parsed integer value for the instance's battery level, stored on the value object as the key `battery_level`. In this example, the parsed integer value representing the device's battery level is being logged to the console.
 
 ---
-##### .writeValue(characteristic, value)
+##### `.writeValue(characteristic, value)`
 
 Method takes a characteristic and value and attempts to write the provided value to the provided characteristic on the device.
 
@@ -210,7 +209,7 @@ exampleDevice.writeValue('gap.device_name', 'myFitbit' )
 In the above example, `.writeValue()` changes the name of the instantiated device to myFitbit.
 
 ---
-##### .startNotifications(characteristic, callback)
+##### `.startNotifications(characteristic, callback)`
 
 Method takes a characteristic name and a callback function. Provided that the characteristic has a 'notify' property, .startNotifications() will pass the event object broadcasted by the characteristic as the parameter of the callback, and run the callback each time a new event occurs.
 
@@ -235,7 +234,7 @@ exampleDevice.startNotifications('heart_rate_measurement', eventObj => {
 In the above example, the `.startNotifications()` method is called on the `BluetoothDevice` instance exampleDevice, which attempts to initiate a stream of notifications from the Bluetooth device, where the provided `callback`, in this example an anonymous function with the parameter `eventObj`, will be applied to the `eventObj` returned from each notification from the device. In this example, `eventObj` contains the ArrayBuffer returned from the device notification, stored to the property `rawValue`, and because `'heart_rate_measurement'` is a fully supported characteristic in Sabertooth, `eventObj` also contains the parsed integer value for the device's heart rate measurement, stored on the `eventObj` object as the key `heart_rate_measurement`. In this example, the parsed integer value representing the notification's heart rate measurement is being logged to the console.
 
 ---
-##### .stopNotifications(characteristic)
+##### `.stopNotifications(characteristic)`
 
 This method stops the notifications from the provided characteristic for the `BluetoothDevice` instance.
 
@@ -255,7 +254,7 @@ exampleDevice.stopNotifications('heart_rate_measurement');
 In the above example, the `.stopNotifications()` method is called on the `BluetoothDevice` instance `exampleDevice`, which attempts to end a stream of notifications from the Bluetooth device.
 
 ---
-##### .addCharacteristic(characteristic, service, properties)
+##### `.addCharacteristic(characteristic, service, properties)`
 
 This method adds Sabertooth support for the provided characteristic to device instance on which the method was called.
 
@@ -281,7 +280,7 @@ exampleDevice.addCharacteristic(
 In the above example, the `.addCharacteristic()` method is called on the `BluetoothDevice` instance `exampleDevice`, which returns an object, in this example referenced as value, containing the parsed integer value for the instance's battery level, stored on the value object as the key `battery_level`.
 
 ---
-### Demo
+### Demos
 
 #### Heart Rate Service
 This demo uses the Sabertooth library to connect to a heart rate monitor broadcasting a Heart Rate Service characteristic and reads it's measurement.
@@ -293,7 +292,7 @@ This demo uses the Sabertooth library to connect to a device broadcasting a Batt
 
 [Visit the GitHub page.](https://github.com/sabertooth-io/demo-battery_service)
 
-Notes:
+> Notes:
 • Requires Android 6.0 Marshmallow, ChromeOS or Chrome for Linux.
 • Enable the 'Web Bluetooth' flag.
 
