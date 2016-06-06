@@ -1,1 +1,1 @@
-module.exports = require('./dist/BluetoothDevice');
+module.exports = require('./dist/npm/BluetoothDevice');

@@ -3,6 +3,25 @@ const browserify = require('browserify');
 const source = require('vinyl-source-stream');
 const notify = require('gulp-notify');
 
+const path = {
+	SRC: 'lib/BluetoothDevice.js',
+	NPM_Dest: 'dist/npm',
+	BOWER_Dest: 'dist/build.js'
+}
+
+const configs = {
+	npm: {
+		entries: [`./lib/${file}`],
+    debug: true,
+    transform: [
+      ['babelify', { presets: ['es2015'] }]
+    ]
+	},
+	bower: {
+		entries: 
+	}
+}
+
 function handleErrors() {
 	notify.onError({
     title : 'Compile Error',
@@ -11,21 +30,15 @@ function handleErrors() {
   this.emit('end'); //keeps gulp from hanging on this task
 }
 
-function build(file) {
-	const props = {
-		entries : [`./lib/${file}`],
-    debug : false,
-    transform : [
-      ['babelify', { presets: ['es2015'] }]
-    ]
-	}
+function build(props, src, out) {
 
 	return browserify(props)
 		.bundle()
 		.on('error', handleErrors)
-		.pipe(source('bundle.js'))
-	 	.pipe(gulp.dest('/dist/'));
+		.pipe(soucre(src))
+	 	.pipe(source(out));
 }
 
-gulp.task('default', ['build']);
-gulp.task('build', build.bind(this, 'BluetoothDevice.js'));
+gulp.task('default', ['npm', 'bower']);
+gulp.task('npm', build.call(this, path.SRC, path.NPM_Dest));
+gulp.task('bower', build.call(this, path.SRC, path.BOWER_Dest));

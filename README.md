@@ -6,7 +6,7 @@ Previously, interacting with Bluetooth devices was limited to native application
 
 ### Overview
 
-Web-bluetooth is a configurable application framework for integrating bluetooth functionality with client-side Javascript.
+Web-bluetooth is a configurable application framework for integrating bluetooth functionality with client-side Javascript. Currently in Alpha.
 
 ### Getting Started
 

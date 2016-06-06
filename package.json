@@ -1,7 +1,7 @@
 {
   "name": "web-bluetooth",
-  "version": "0.0.13",
-  "description": "Library for interacting with Bluetooth devices through the browser. Currently in Alpha.",
+  "version": "0.1.0",
+  "description": "Library for interacting with Bluetooth 4.0 devices through the browser.",
   "keywords": [
     "abstraction",
     "API",
@@ -37,7 +37,9 @@
   },
   "main": "npm.js",
   "scripts": {
-    "build": "babel lib --presets babel-preset-es2015 --out-dir dist",
+    "build": "npm run build:npm && npm run build:bower",
+    "build:npm": "babel lib --presets babel-preset-es2015 --out-dir dist/npm",
+    "build:bower": "browserify -t [babelify] lib/BluetoothDevice.js -o dist/build.js",
     "test": "open test/browser-integration.html",
     "lint": "eslint lib/*.js && eslint lib/**/*.js"
   },
@@ -45,6 +47,8 @@
   "devDependencies": {
     "babel-cli": "^6.9.0",
     "babel-preset-es2015": "^6.9.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
     "chai": "^3.5.0",
     "eslint": "^2.11.1",
     "eslint-config-airbnb": "^9.0.1",
