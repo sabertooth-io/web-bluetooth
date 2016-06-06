@@ -160,7 +160,7 @@ exampleDevice.connected();
 In the example above, an attempt will be made to check the connection status of a previously created `BluetoothDevice` instance named `exampleDevice`.
 
 ---
-##### .getValue(characteristic)
+##### `.getValue(characteristic)`
 
 Method attempts to read the value of provided characteristic from a connected `BluetoothDevice` instance.
 
