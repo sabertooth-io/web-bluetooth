@@ -3,21 +3,13 @@
 [![npm version](https://badge.fury.io/js/web-bluetooth.svg)](https://badge.fury.io/js/web-bluetooth)
 ![pull requests welcomed](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
-### A Javascript Library for interacting with Bluetooth Low Energy Devices.
+### Library for interacting with Bluetooth 4.0 devices through the browser.
 
-##### Bridging the gap between the web and the physical world through Bluetooth.
-
-Previously, interacting with Bluetooth devices was limited to native applications. Access to connect, read, and write from Bluetooth devices is now made available to web applications thanks to the Web Bluetooth API and modern web browsers like Chrome and Firefox, Opera who are incresingly adding support for new features in the Web Bluetooth API Spec.
-
-### Overview
-
-Sabertooth is a configurable application library for integrating Bluetooth functionality with client-side Javascript.
+Connect, read, and write to Bluetooth devices in web applications using only a few lines of Javascript.
 
 ### Getting Started
 
-Sabertooth has a few easy ways to quickly get started, each one appealing to your preferences.
-
-> Note: Sabertooth package names and file names appear as 'web-bluetooth' throughout the documentation, consistent with actual package names and file names you will encounter when searching for or working with Sabertooth.
+Web-bluetooth (aka Sabertooth) has a few easy ways to quickly get started, each one appealing to your preferences.
 
 #### Install with npm
 
