@@ -1,6 +1,6 @@
 {
   "name": "web-bluetooth",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Library for interacting with Bluetooth 4.0 devices through the browser.",
   "keywords": [
     "abstraction",
@@ -40,6 +40,7 @@
     "build": "npm run build:npm && npm run build:bower",
     "build:npm": "babel lib --presets babel-preset-es2015 --out-dir dist/npm",
     "build:bower": "browserify -t [babelify] lib/BluetoothDevice.js -o dist/build.js",
+    "prepublish": "npm run build",
     "test": "open test/browser-integration.html",
     "lint": "eslint lib/*.js && eslint lib/**/*.js"
   },
